@@ -8,14 +8,11 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v4
-    - name: Install Cowsay Program
-      run: sudo apt-get install -y cowsay
-    - name: Create Dragon Message
-      run: cowsay -f dragon "Run for cover, I am a DRAGON...RAMR" >> dragon.txt
-    - name: Test File Exists
-      run: grep -i "dragon" dragon.txt
     - name: Read File
-      run: cat dragon.txt
+      run: ls -ltra 
+    - name: Execute shell script
+      run: ./ascii-script.sh
+   
 
       
     
